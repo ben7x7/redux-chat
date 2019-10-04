@@ -9,3 +9,25 @@ export function fetchMessages(channel) {
     payload: promise
   }
 }
+
+export function createMessage(channel, content) {
+  const url = `${BASE_URL}/${channel}/messages`;
+  const body = {
+    author: 'toto',
+    content
+  };
+
+  const promise = fetch(url, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  }).then(r => r.json());
+
+  return {
+    type: 'MESSAGE_POSTED',
+    payload: promise
+  };
+}
