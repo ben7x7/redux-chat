@@ -3,7 +3,7 @@ body {
 }
 
 .messaging-wrapper {
-  display: flex;
+  display: flex !important;
   height: 100vh;
 }
 
@@ -13,7 +13,7 @@ body {
   padding: 10px;
   width: 60px;
   height: 100%;
-  background: #dbdbdb;
+  background-color: #dbdbdb;
   box-sizing: border-box;
 }
 

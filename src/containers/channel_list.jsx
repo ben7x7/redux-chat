@@ -6,7 +6,7 @@ import { selectChannel, fetchMessages } from '../actions/index';
 class ChannelList extends Component {
 
   ComponentWillReceiveProps(nextProps) {
-    if (nextProps.selectedChannel !== this.props.selectedChannel {
+    if (nextProps.selectedChannel !== this.props.selectedChannel) {
       this.props.fetchMessages(nextProps.selectedChannel);
     }
   }

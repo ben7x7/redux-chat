@@ -30,7 +30,7 @@ class MessageForm extends Component {
           ref={(input) => { this.messageBox = input; }}
           type="text"
           className="form-control"
-          autocomplete="off"
+          autoComplete="off"
           value={this.state.value}
           onChange={this.handleChange}
         />
