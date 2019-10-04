@@ -6,7 +6,6 @@ import { createMessage } from '../actions/index';
 class MessageForm extends Component {
   constructor(props) {
     super(props);
-
     this.state = { value: '' };
   }
 
@@ -28,7 +27,7 @@ class MessageForm extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="channel-editor">
         <input
-          ref={input => this.messageBox = input}
+          ref={(input) => { this.messageBox = input; }}
           type="text"
           className="form-control"
           autocomplete="off"

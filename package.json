@@ -24,6 +24,8 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "react-emojione":"^5.0.1",
+    "file-loader":"4.2.0",
     "js-yaml": "^3.13.1",
     "react": "16.2",
     "react-dom": "16.2",

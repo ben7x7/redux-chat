@@ -5,9 +5,14 @@ import { selectChannel, fetchMessages } from '../actions/index';
 
 class ChannelList extends Component {
 
+  ComponentWillReceiveProps(nextProps) {
+    if (nextProps.selectedChannel !== this.props.selectedChannel {
+      this.props.fetchMessages(nextProps.selectedChannel);
+    }
+  }
+
   handleClick = (channel) => {
     this.props.selectChannel(channel);
-    this.props.fetchMessages(channel);
   }
 
   renderChannel = (channel) => {
@@ -15,7 +20,9 @@ class ChannelList extends Component {
       <li
         key={channel}
         className={channel === this.props.selectedChannel ? 'active' : null}
-        onClick={() => this.handleClick(channel)}>
+        onClick={() => this.handleClick(channel)}
+        role="presentation"
+      >
         #{channel}
       </li>
     );
